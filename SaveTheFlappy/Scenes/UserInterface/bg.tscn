@@ -8,6 +8,7 @@
 script = ExtResource("1_ea3d1")
 
 [node name="Sky" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.5, 1)
 motion_mirroring = Vector2(288, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sky"]
@@ -16,9 +17,8 @@ texture = ExtResource("1_nimvq")
 
 [node name="Floor" type="ParallaxLayer" parent="."]
 position = Vector2(-1, 0)
-motion_mirroring = Vector2(224, 0)
+motion_mirroring = Vector2(336, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Floor"]
-position = Vector2(144, 456)
-scale = Vector2(0.857143, 1)
+position = Vector2(169, 456)
 texture = ExtResource("2_ea3d1")
