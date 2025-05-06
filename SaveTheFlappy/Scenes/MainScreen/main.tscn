@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4mcy5irtev3"]
+
+[ext_resource type="PackedScene" uid="uid://dlqxfbmshgrjk" path="res://Scenes/UserInterface/bg.tscn" id="1_ur8sl"]
+[ext_resource type="PackedScene" uid="uid://2saa36wmlcb8" path="res://Scenes/Actor/player.tscn" id="2_ar7jc"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -102
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+
+[node name="Node2D" type="Node2D" parent="CanvasLayer"]
+position = Vector2(368, 192)
+
+[node name="BG" parent="." instance=ExtResource("1_ur8sl")]
+
+[node name="Player" parent="." instance=ExtResource("2_ar7jc")]
+position = Vector2(144, 192)
