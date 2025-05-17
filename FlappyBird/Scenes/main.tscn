@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bwf5i0qyei8n0" path="res://Assets/background-day.png" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://lc4i5438c6s1" path="res://Scenes/bird.tscn" id="1_jjgbg"]
-[ext_resource type="PackedScene" uid="uid://c0pfs4k4dhavp" path="res://ground.tscn" id="3_8gbba"]
+[ext_resource type="PackedScene" uid="uid://c0pfs4k4dhavp" path="res://Scenes/ground.tscn" id="3_8gbba"]
 
 [node name="main" type="Node"]
 
