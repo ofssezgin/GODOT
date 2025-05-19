@@ -12,11 +12,10 @@ var pipe_pair_scene = preload("res://Scenes/pipe_pair.tscn")
 @onready var spawn_timer = $SpawnTimer
 
 func _ready():
-	spawn_timer.timeout.connect(spawn_pipe)
 	spawn_timer.start()
 
 func start_spawning_pipes():
-	pass
+	spawn_timer.timeout.connect(spawn_pipe)
 
 func spawn_pipe():
 	var pipe = pipe_pair_scene.instantiate() as PipePair
@@ -29,7 +28,7 @@ func spawn_pipe():
 	pipe.position.y = randf_range(viewport_rect.size.y * 0.15 - half_height,viewport_rect.size.y *0.65 - half_height)
 	
 	pipe.bird_entered.connect(on_bird_entered)
-	pipe.bird_entered.connect(on_point_scored)
+	pipe.point_scored.connect(on_point_scored)
 	pipe.set_speed(pipe_speed)
 	
 func on_bird_entered():
