@@ -3,6 +3,7 @@ extends Node
 @onready var bird: Bird = $"../Bird"
 @onready var pipe_spawner: PipeSpawner = $"../PipeSpawner"
 @onready var ground: Ground = $"../Ground"
+@onready var ui: CanvasLayer = $"../UI" as UI
 
 
 var points = 0
@@ -20,6 +21,8 @@ func end_game():
 	ground.stop()
 	bird.kill()
 	pipe_spawner.stop()
+	ui.on_game_over()
 
 func on_point_scored():
 	points += 1
+	ui.update_points(points)
